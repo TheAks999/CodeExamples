@@ -1,0 +1,3 @@
+This is a bunch of code for example. I'm particularly proud 
+of the Mutex and Threadler classes as they work on both 
+windows and posix threads
