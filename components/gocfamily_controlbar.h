@@ -1,4 +1,11 @@
-
+/************************************
+*This file contains a mix of a component
+*and a
+*
+*Written by:
+*  Alex Shepard
+*  aksfkb@mst.edu
+*************************************/
 #ifndef GOCFAMILY_CONTROLBAR_H
 #define GOCFAMILY_CONTROLBAR_H
 
@@ -14,6 +21,7 @@ class GOCFamily_ControlBar : public GOComponent, public QWidget
 		virtual ~GOCFamily_ControlBar() = 0;
 
 		virtual const GOC_IDType familyID() const {return GOC_IDType("ControlBarFamily");}
+
 		/** switches the label on the play/pause button when it is pushed */
 		virtual void playPause() = 0;
 		/**

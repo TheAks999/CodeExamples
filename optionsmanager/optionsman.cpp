@@ -1,6 +1,6 @@
 /************************************
-*This file contains a templated
-*singleton class pattern.
+*This file contains the implementation
+*of the OptionsMan class
 *
 *
 *Written by:

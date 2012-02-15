@@ -1,3 +1,10 @@
+/************************************
+*
+*
+*Written by:
+*  Alex Shepard
+*  aksfkb@mst.edu
+*************************************/
 #ifndef GOCFAMILY_LOCATION_H
 #define GOCFAMILY_LOCATION_H
 

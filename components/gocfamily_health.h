@@ -1,3 +1,10 @@
+/************************************
+*
+*
+*Written by:
+*  Alex Shepard
+*  aksfkb@mst.edu
+*************************************/
 #ifndef GOCFAMILY_HEALTH_H
 #define GOCFAMILY_HEALTH_H
 #include "../gameobject/gocomponent.h"
@@ -24,7 +31,7 @@ class GOCFamily_Health : public GOComponent
 
     float healthPercent()
     {
-	return (m_maxHealth?((float)m_currentHealth)/((float)m_maxHealth):1);
+		return (m_maxHealth?((float)m_currentHealth)/((float)m_maxHealth):1);
     }
 
 protected:

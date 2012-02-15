@@ -1,3 +1,10 @@
+/************************************
+*
+*
+*Written by:
+*  Alex Shepard
+*  aksfkb@mst.edu
+*************************************/
 #ifndef GOC_OWNER_H
 #define GOC_OWNER_H
 #include "../gameobject/gocomponent.h"

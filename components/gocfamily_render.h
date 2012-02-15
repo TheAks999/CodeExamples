@@ -1,3 +1,10 @@
+/************************************
+*
+*
+*Written by:
+*  Alex Shepard
+*  aksfkb@mst.edu
+*************************************/
 #ifndef GOCFAMILY_RENDER_H
 #define GOCFAMILY_RENDER_H
 

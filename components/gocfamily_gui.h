@@ -1,3 +1,10 @@
+/************************************
+*
+*
+*Written by:
+*  Alex Shepard
+*  aksfkb@mst.edu
+*************************************/
 #ifndef GOCFAMILY_GUI_H
 #define GOCFAMILY_GUI_H
 

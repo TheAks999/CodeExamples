@@ -1,3 +1,10 @@
+/************************************
+*
+*
+*Written by:
+*  Alex Shepard
+*  aksfkb@mst.edu
+*************************************/
 #ifndef GOC_XY_LOCATION_H
 #define GOC_XY_LOCATION_H
 #include "gocfamily_location.h"
