@@ -1,0 +1,9 @@
+This directory contains a singleton manager
+for global variables. It will load in
+variables from a options file specified,
+store and maintain those options, and
+save them back out to a file specified.
+
+This is also an attempt at a
+workaround for pseudo run time type
+information (RTTI) in C++ for global options.
