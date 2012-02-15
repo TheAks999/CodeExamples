@@ -1,11 +1,16 @@
+/************************************
+*This file contains a templated
+*singleton class pattern.
+*
+*
+*Written by:
+*  Alex Shepard
+*  aksfkb@mst.edu
+*************************************/
 #include "optionsman.h"
 #include <iostream>
 
-/** @brief exists
-  * check to see if the string is a valid option name
-  * @param oName The name of the option to check
-  * @return true if it exists
-  */
+
 bool OptionsMan::exists(const std::string & oName)
 {
 	if (!isInit())
@@ -19,11 +24,7 @@ bool OptionsMan::exists(const std::string & oName)
 	return false;
 }
 
-/** @brief operator()
-  *	Directly access an option's pointer
-  * @param oName the name of the option to access
-  * @return a pointer to the option if it exists, otherwise NULL
-  */
+
 OptionBase * OptionsMan::operator()(const std::string & oName)
 {
 	if (exists(oName))
@@ -32,14 +33,11 @@ OptionBase * OptionsMan::operator()(const std::string & oName)
 	return NULL;
 }
 
-/** @brief loadOptionFile
-  * this loads in an option file to the singleton
-  * @param filename the option file to load
-  * @return true if all goes well
-  * @todo: clean this function up a bit
-  */
+
 bool OptionsMan::loadOptionFile(const std::string & filename)
 {
+
+
     if (!Singleton<OptionsMan>::isInit())
 	{
 	    std::cout << "Error: Options Manager wouldn't load option file because it isn't initialized\n";
@@ -308,13 +306,7 @@ bool OptionsMan::addString(const std::string & namebuff, std::stringstream & ss,
 
 
 
-/** @brief saveOptionFile
-  *	save all of your options to file
-  * @param filename the name of the file to save the options into
-  * @return true if all goes well
-  * @todo find a way to maintain comments and white space
-  * @todo better error checking
-  */
+
 bool OptionsMan::saveOptionFile(const std::string & filename)
 {
 	if (!isInit())
@@ -367,95 +359,55 @@ bool OptionsMan::saveOptionFile(const std::string & filename)
 }
 
 
-/** @brief setStr
-  * set a string option to the intended value
-  * @param oName the name of the option to be modified
-  * @param val the value to change the option to
-  */
+
 void OptionsMan::setStr(const std::string & oName,const std::string & val)
 {
 	setVar<std::string,OT_STRING>(oName,val);
 }
 
-/** @brief getStr
-  * get the value of a string option
-  * @param oName the name of the option
-  * @return the value of the option or a default variable value if it
-		doesnt exist
-  */
+
 std::string OptionsMan::getStr(const std::string & oName)
 {
 	return getVar<std::string,OT_STRING>(oName);
 }
 
-/** @brief setBool
-  * set a bool option to the intended value
-  * @param oName the name of the option to be modified
-  * @param val the value to change the option to
-  */
+
 void OptionsMan::setBool(const std::string & oName,const bool & val)
 {
 	setVar<bool,OT_BOOL>(oName,val);
 }
 
-/** @brief getBool
-  * get the value of a bool option
-  * @param oName the name of the option
-  * @return the value of the option or a default variable value if it
-		doesnt exist
-  */
+
 bool OptionsMan::getBool(const std::string & oName)
 {
 	return getVar<bool,OT_BOOL>(oName);
 }
 
-/** @brief getFloat
-  * get the value of a float option
-  * @param oName the name of the option
-  * @return the value of the option or a default variable value if it
-		doesnt exist
-  */
+
 float OptionsMan::getFloat(const std::string & oName)
 {
 	return getVar<float,OT_FLOAT>(oName);
 }
 
-/** @brief setInt
-  * set an integer option to the intended value
-  * @param oName the name of the option to be modified
-  * @param val the value to change the option to
-  */
+
 void OptionsMan::setInt(const std::string & oName,const int & val)
 {
 	setVar<int,OT_INT>(oName,val);
 }
 
-/** @brief getInt
-  * get the value of a integer option
-  * @param oName the name of the option
-  * @return the value of the option or a default variable value if it
-		doesnt exist
-  */
+
 int OptionsMan::getInt(const std::string & oName)
 {
 	return getVar<int,OT_INT>(oName);
 }
 
-/** @brief setFloat
-  * set a float option to the intended value
-  * @param oName the name of the option to be modified
-  * @param val the value to change the option to
-  */
+
 void OptionsMan::setFloat(const std::string & oName,const float & val)
 {
 	setVar<float,OT_FLOAT>(oName,val);
 }
 
-/** @brief optionType
-  * get the type of the option in question
-  * @param oName the name of the option
-  * @return the type of the option if it exists, otherwise OT_NONE
-  */
+
 OptionType OptionsMan::optionType(const std::string & oName)
 {
 	if (exists(oName))
@@ -464,10 +416,7 @@ OptionType OptionsMan::optionType(const std::string & oName)
 	return OT_NONE;
 }
 
-/** @brief destroy
-  * destroy the options manager
-  * @return true if all goes well
-  */
+
 bool OptionsMan::destroy()
 {
 	if (!isInit())
@@ -483,7 +432,7 @@ bool OptionsMan::destroy()
 	return Singleton<OptionsMan>::destroy();
 }
 
-/** @brief getInt
+/** @brief getVar
   * get the value of a integer option
   * @param oName the name of the option
   * @return the value of the option or a default variable value if it
