@@ -1,6 +1,6 @@
 /************************************
 *This file contains a templated
-*singleton class.
+*singleton class pattern.
 *
 *
 *Written by:
